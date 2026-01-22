@@ -1,29 +1,20 @@
 pipeline {
     agent any
-
- tools {
-     jdk 'java17'
-     maven 'maven3.6'
- }
-    
+     tools{
+         jdk 'java 17'
+         maven 'Maven3.6'
+     }
     stages {
-        
-        stage('Compile') {
-            steps {
-            sh  'mvn compile'
+       
+        stage('maven install'){
+            steps{
+                sh 'mvn install'
             }
         }
-        
-        stage('Testing') {
-            steps {
-                sh 'mvn test'
-            }
-        }
-        
-        stage('Building The Project') {
-            steps {
+        stage('mvn package'){
+            steps{
                 sh 'mvn package'
             }
+          }
         }
     }
-}
