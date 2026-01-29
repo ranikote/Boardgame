@@ -5,7 +5,10 @@ pipeline {
          maven 'maven-3.9.6'
      }
     stages {
-       
+        stage('Adding new jenkisfile){
+              steps {
+                  echo "Adding new file"
+            
         stage('maven install'){
             steps{
                 sh 'mvn install'
