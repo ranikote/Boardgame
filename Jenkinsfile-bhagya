@@ -8,6 +8,8 @@ pipeline {
         stage('Adding new jenkisfile'){
               steps {
                   echo "Adding new file"
+                              }
+                           }
             
         stage('maven install'){
             steps{
