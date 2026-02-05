@@ -3,6 +3,7 @@ pipeline {
      tools{
          jdk 'java 17'
          maven 'maven-3.9.6'
+
      }
     stages {
         stage('Adding new jenkisfile'){
