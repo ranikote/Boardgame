@@ -31,7 +31,7 @@ jobs:
       - name: Check Maven version
         run: mvn -version
 
-      - name: Build and run tests
+      - name: Build and test
         run: mvn clean verify
 
       - name: Package application
@@ -42,4 +42,5 @@ jobs:
         with:
           name: java-app
           path: target/*.jar
+
 
